@@ -34,7 +34,7 @@ Participants are also randomly assigned a **subject_id** (variable name), and a 
 
 The critical stimuli in the indirect requests task are coded according to their **stimulus type** as *belief* or *no_belief* (corresponding to Speaker Aware and Speaker Unaware from the paper, respectively).
 
-Answers to the Short Story Task are coded as *sst* (for the **stimType** variable**). 
+Answers to the Short Story Task are coded as *sst* (for the **stimType** variable). 
 
 Answers to the preliminary SST questions are coded as *sst_general* (for the **stimType** variable).
 
