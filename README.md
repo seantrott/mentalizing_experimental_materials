@@ -12,13 +12,13 @@ Finally, there are a couple of path/file-dependent functions:
 
 ### **Saving the data**
 
-Attached is a .php script (*save_data.php*) which can be used to save the data from the experiment onto a server. Replace *{INTENDED_FILEPATH}* with the path you want to use, e.g.:
+Attached is a .php script (*save_data.php*) which can be used to save the data from the experiment onto a server. Replace *{INTENDED_FILEPATH}* with the path you want to use:
 
 ```
 $filename = "my_server/data".$_POST['filename'];
 ```
 
-###**Consent page**
+### **Consent page**
 
 There is also an .html page, *consent.html*, which embeds a consent form in the web browser (and is then referenced by the main experiment script), allowing participants to explicitly mark their consent to the experiment. Replace *{CONSENT_FILE.pdf}* with the path to the appropriate consent file, e.g.
 
