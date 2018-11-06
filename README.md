@@ -43,3 +43,7 @@ The number of a given item is coded as **stimNum**.
 Information about a participant's gender and whether they are a native English speaker is coded as *demographic1* in the **stimType** variable. 
 
 Finally, information about a participant's age and what they thought the experiment was about is coded as *demographic2* in the **stimType** variable.
+
+## Differences between experiments
+
+The only difference between Experiment 2 and Experiment 3, as described in Trott and Bergen (2018), is the target question: in Experiment 2, participants are asked to make a paragraph judgment, and in Experiment 3, they explicitly indicate whether they thought the speaker was making a request.

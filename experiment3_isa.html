@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Experiment 2</title>
+        <title>Experiment 3</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="jspsych-5.0.3/jspsych.js"></script>
         <script src="jspsych-5.0.3/plugins/jspsych-text.js"></script>
@@ -31,8 +31,6 @@
 
     // get turk info
     var turkInfo = jsPsych.turk.turkInfo();
-
-
 
     // pick a random condition for the subject at the start of the experiment
   var condition_assignment = jsPsych.randomization.sample(['group1', 'group2'],1)[0];
@@ -69,7 +67,7 @@ var check_consent = function(elem) {
     /* define welcome message block */
     var welcome_block = {
       type: "survey-text",
-      questions: ["In this study, you will read a series of passages describing interactions you might have with various people. Read the passages carefully; after each passage, you will be asked to choose which <b>paraphrases</b> of certain utterances in the passage best fit your estimation of the character's intentions.<p>A <b>paraphrase</b> is a rewording of the original sentence; here, you should choose the paraphrase that best matches what you think the character <i>intended</i> (not necessarily just a literal rewording). Think carefully about each response.<p>When you finish reading a passage, press any key to advance.<br><br>If you are coming from Amazon Turk and know your Amazon Turk ID, enter it below. Otherwise, just click 'Submit Answers' to begin the experiment. <br><br>Amazon Turk ID:"]
+      questions: ["In this study, you will read a series of passages describing interactions you might have with various people. Read the passages carefully; after each passage, you will be asked whether you think the other character is making a request.<p>When you finish reading a passage, press any key to advance.<br><br>If you are coming from Amazon Turk and know your Amazon Turk ID, enter it below. Otherwise, just click 'Submit Answers' to begin the experiment. <br><br>Amazon Turk ID:"]
     };
 
       var text1_b = {
@@ -174,9 +172,9 @@ var check_consent = function(elem) {
 
     var q1_b = {
     type: 'survey-multi-choice',
-      questions: ['He turns to you and says, <q>Man, it\'s really cold in here.</q>. <p>What do you think the best paraphrase of his intentions is?'],
-      options: [jsPsych.randomization.shuffle(['Could you turn on the heater?', 'I\'m really cold; it\'s too bad the heater is broken.'])],
-      required:[true],
+      questions: ['He turns to you and says, <q>Man, it\'s really cold in here.</q>. <p>Do you think he is making a request?'],
+      options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     data: {stimType: 'belief', stimNum: 1},
 
     rows: [5,3],
@@ -186,9 +184,9 @@ var check_consent = function(elem) {
 
     var q2_b = {
     type: 'survey-multi-choice',
-      questions: ['Brian turns to you and says, <q>You guys really did a number on the kitchen.</q> <p>What do you think the best paraphrase of his intentions is?'],
-      options: [jsPsych.randomization.shuffle(['Could you clean up the kitchen when you get a chance?', 'The kitchen is really dirty; good thing Lisa will take care of it soon.'])],
-      required:[true],
+      questions: ['Brian turns to you and says, <q>You guys really did a number on the kitchen.</q> <p>Do you think he is making a request?'],
+      options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     data: {stimType: 'belief', stimNum: 2},
 
     rows: [5,3],
@@ -197,9 +195,9 @@ var check_consent = function(elem) {
 
   var q3_b = {
     type: 'survey-multi-choice',
-      questions: ['Sarah eyes your plate of fries and says, <q>Man, those fries look delicious...</q> <p>What do you think the best paraphrase of her intentions is?'],
-      options: [jsPsych.randomization.shuffle(['Could I have one of your fries?', 'I wish I could have a fry; too bad I\'m allergic.'])],
-      required:[true],
+      questions: ['Sarah eyes your plate of fries and says, <q>Man, those fries look delicious...</q> <p>Do you think she is making a request?'],
+      options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     data: {stimType: 'belief', stimNum: 3},
 
     rows: [5,3],
@@ -208,9 +206,9 @@ var check_consent = function(elem) {
 
   var q4_b = {
     type: 'survey-multi-choice',
-      questions: ['As you pass, he looks up at you, catches your eye, and says, <q>This steak is so overdone!</q> <p>What do you think the best paraphrase of his intentions is?'],
-      options: [jsPsych.randomization.shuffle(['Could you get me another steak?', 'Too bad you don\'t work here, since I really need another steak.'])],
-      required:[true],
+      questions: ['As you pass, he looks up at you, catches your eye, and says, <q>This steak is so overdone!</q> <p>Do you think he is making a request?'],
+      options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     data: {stimType: 'belief', stimNum: 4},
 
     rows: [5,3],
@@ -220,10 +218,10 @@ var check_consent = function(elem) {
 
   var q5_b = {
     type: 'survey-multi-choice',
-      questions: ['He turns to you, his hands on his hips, and says, <q>Man, that fence is looking worse than ever; a new paint-job couldn\'t come soon enough.</q><p>What do you think the best paraphrase of his intentions is?'],
+      questions: ['He turns to you, his hands on his hips, and says, <q>Man, that fence is looking worse than ever; a new paint-job couldn\'t come soon enough.</q><p>Do you think he is making a request?'],
     data: {stimType: 'belief', stimNum: 5},
-    required:[true],
-    options: [jsPsych.randomization.shuffle(['When you get a chance, could you paint the fence?', 'I\'m glad someone is coming soon to paint the fence.'])],
+      required:[false],
+    options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
 
     rows: [5,3],
     columns: [40,50]
@@ -232,10 +230,10 @@ var check_consent = function(elem) {
 
   var q6_b = {
     type: 'survey-multi-choice',
-      questions: ['Back in the kitchen, your friend turns to you and says: <q>I am so thirsty . . . </q><p>What do you think the best paraphrase of his intentions is?'],
+      questions: ['Back in the kitchen, your friend turns to you and says: <q>I am so thirsty . . . </q><p>Do you think he is making a request?'],
     data: {stimType: 'belief', stimNum: 6},
-    required:[true],
-    options: [jsPsych.randomization.shuffle(['Could you get me a glass of water?', 'I am really thirsty, too bad your water is not working.'])],
+      required:[false],
+    options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
 
     rows: [5,3],
     columns: [40,50]
@@ -243,29 +241,29 @@ var check_consent = function(elem) {
 
   var q7_b = {
     type: 'survey-multi-choice',
-      questions: ['She looks up at you and says, <q>This wine is excellent.</q><p>What do you think the best paraphrase of her intentions is?'],
+      questions: ['She looks up at you and says, <q>This wine is excellent.</q><p>Do you think she is making a request?'],
     data: {stimType: 'belief', stimNum: 7},
-    options: [jsPsych.randomization.shuffle(['Could I have another glass of wine?', 'This is really good wine; too bad there\'s no more.'])],
-      required:[true],
+    options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     rows: [5,3],
     columns: [40,50]
   };
 
   var q8_b = {
     type: 'survey-multi-choice',
-      questions: ['Rob says, <q>So . . . how are you planning on getting there?</q><p>What do you think the best paraphrase of his intentions is?'],
+      questions: ['Rob says, <q>So . . . how are you planning on getting there?</q><p>Do you think he is making a request?'],
     data: {stimType: 'belief', stimNum: 8},
-    options: [jsPsych.randomization.shuffle(['Could I get a ride to the party?', 'Since your car is in the shop, how are you planning on getting to the party?'])],
-      required:[true],
+    options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     rows: [5,3],
     columns: [40,50]
   };
 
    var q1_nb = {
     type: 'survey-multi-choice',
-      questions: ['He turns to you and says, <q>Man, it\'s really cold in here.</q>. <p>What do you think the best paraphrase of his intentions is?'],
-      options: [jsPsych.randomization.shuffle(['Could you turn on the heater?', 'I\'m really cold; it\'s too bad the heater is broken.'])],
-      required:[true],
+      questions: ['He turns to you and says, <q>Man, it\'s really cold in here.</q>. <p>Do you think he is making a request?'],
+      options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     data: {stimType: 'no_belief', stimNum: 1},
 
     rows: [5,3],
@@ -275,9 +273,9 @@ var check_consent = function(elem) {
 
     var q2_nb = {
     type: 'survey-multi-choice',
-      questions: ['Brian turns to you and says, <q>You guys really did a number on the kitchen.</q> <p>What do you think the best paraphrase of his intentions is?'],
-      options: [jsPsych.randomization.shuffle(['Could you clean up the kitchen when you get a chance?', 'The kitchen is really dirty; good thing Lisa will take care of it soon.'])],
-      required:[true],
+      questions: ['Brian turns to you and says, <q>You guys really did a number on the kitchen.</q> <p>Do you think he is making a request?'],
+      options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     data: {stimType: 'no_belief', stimNum: 2},
 
     rows: [5,3],
@@ -286,9 +284,9 @@ var check_consent = function(elem) {
 
   var q3_nb = {
     type: 'survey-multi-choice',
-      questions: ['Sarah eyes your plate of fries and says, <q>Man, those fries look delicious...</q> <p>What do you think the best paraphrase of her intentions is?'],
-      options: [jsPsych.randomization.shuffle(['Could I have one of your fries?', 'I wish I could have a fry; too bad I\'m allergic.'])],
-      required:[true],
+      questions: ['Sarah eyes your plate of fries and says, <q>Man, those fries look delicious...</q> <p>Do you think she is making a request?'],
+      options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     data: {stimType: 'no_belief', stimNum: 3},
 
     rows: [5,3],
@@ -297,9 +295,9 @@ var check_consent = function(elem) {
 
   var q4_nb = {
     type: 'survey-multi-choice',
-      questions: ['As you pass, he looks up at you, catches your eye, and says, <q>This steak is so overdone!</q> <p>What do you think the best paraphrase of her intentions is?'],
-      options: [jsPsych.randomization.shuffle(['Could you get me another steak?', 'Too bad you don\'t work here, since I really need another steak.'])],
-      required:[true],
+      questions: ['As you pass, he looks up at you, catches your eye, and says, <q>This steak is so overdone!</q> <p>Do you think he is making a request?'],
+      options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     data: {stimType: 'no_belief', stimNum: 4},
 
     rows: [5,3],
@@ -309,10 +307,10 @@ var check_consent = function(elem) {
 
   var q5_nb = {
     type: 'survey-multi-choice',
-      questions: ['He turns to you, his hands on his hips, and says, <q>Man, that fence is looking worse than ever; a new paint-job couldn\'t come soon enough.</q><p>What do you think the best paraphrase of his intentions is?'],
+      questions: ['He turns to you, his hands on his hips, and says, <q>Man, that fence is looking worse than ever; a new paint-job couldn\'t come soon enough.</q><p>Do you think he is making a request?'],
     data: {stimType: 'no_belief', stimNum: 5},
-    options: [jsPsych.randomization.shuffle(['When you get a chance, could you paint the fence?', 'I\'m glad someone is coming soon to paint the fence.'])],
-      required:[true],
+    options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     rows: [5,3],
     columns: [40,50]
   };
@@ -320,30 +318,30 @@ var check_consent = function(elem) {
 
   var q6_nb = {
     type: 'survey-multi-choice',
-      questions: ['Back in the kitchen, your friend turns to you and says: <q>I am so thirsty . . . </q><p>What do you think the best paraphrase of his intentions is?'],
+      questions: ['Back in the kitchen, your friend turns to you and says: <q>I am so thirsty . . . </q><p>Do you think he is making a request?'],
     data: {stimType: 'no_belief', stimNum: 6},
-    options: [jsPsych.randomization.shuffle(['Could you get me a glass of water?', 'I am really thirsty, too bad your water is not working.'])],
-      required:[true],
+    options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     rows: [5,3],
     columns: [40,50]
   };
 
   var q7_nb = {
     type: 'survey-multi-choice',
-      questions: ['She looks up at you and says, <q>This wine is excellent.</q><p>What do you think the best paraphrase of her intentions is?'],
+      questions: ['She looks up at you and says, <q>This wine is excellent.</q><p>Do you think she is making a request?'],
     data: {stimType: 'no_belief', stimNum: 7},
-    options: [jsPsych.randomization.shuffle(['Could I have another glass of wine?', 'This is really good wine; too bad there\'s no more.'])],
-      required:[true],
+    options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     rows: [5,3],
     columns: [40,50]
   };
 
   var q8_nb = {
     type: 'survey-multi-choice',
-      questions: ['Rob says, <q>So . . . how are you planning on getting there?</q><p>What do you think the best paraphrase of his intentions is?'],
+      questions: ['Rob says, <q>So . . . how are you planning on getting there?</q><p>Do you think he is making a request?'],
     data: {stimType: 'no_belief', stimNum: 8},
-    options: [jsPsych.randomization.shuffle(['Could I get a ride to the party?', 'Since your car is in the shop, how are you planning on getting to the party?'])],
-      required:[true],
+    options: [jsPsych.randomization.shuffle(['Yes', 'No'])],
+      required:[false],
     rows: [5,3],
     columns: [40,50]
   };
@@ -460,7 +458,7 @@ var check_consent = function(elem) {
       "What does Nick mean when he says, \'It isn\'t fun anymore\'?",
       "Why does Marjorie sit with her back toward Nick when she asks, 'Isn\'t love any fun?\'?",
       "Why does Marjorie take the boat and leave and what is she feeling at that moment?",
-      "Who is Bill and what does he reveal when he asks Nick, \'Did she go alright? … Have a scene?\'?",
+      "Who is Bill and what does he reveal when he asks Nick, \'Did she go alright? ... Have a scene?\'?",
       "What is Nick feeling when he says, \'Oh, go away, Bill! Go away for a while\'?",
       "The story is called \'The End of Something.\' What is the title referring to?"
       ],
@@ -470,11 +468,6 @@ var check_consent = function(elem) {
     required: [true,true,true,true,true,true,true,true,true,true,true,true,true,true],
        data: {stimType: "sst"}
     }
-
-  
-
-
-
 
 
   // Demographics stuff
@@ -528,7 +521,7 @@ var check_consent = function(elem) {
   }
 
 
-  var filename = 'experiment2_sst_' + subject_id + '.csv'
+  var filename = 'experiment3a_isa_' + subject_id + '.csv'
 
 
     /* start the experiment */
