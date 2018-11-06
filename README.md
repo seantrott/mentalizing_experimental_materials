@@ -1,6 +1,6 @@
 # Experimental materials for investigating mentalizing and pragmatic inference
 
-This repository contains the JsPsych code to run the online experiments described in Trott and Bergen (Discourse Processes, to appear). 
+This repository contains the JsPsych code to run the online experiments described in Trott and Bergen (*Discourse Processes*, to appear). 
 
 ## Dependencies
 
@@ -25,3 +25,21 @@ There is also an .html page, *consent.html*, which embeds a consent form in the 
 ```
 <embed src="lab_consent_file.pdf" width="800px" height="1100px" />
 ```
+
+## Relevant variables
+
+Participants are randomly assigned to one of two lists (*group1* or *group2*), coded in the *condition* variable.
+
+Participants are also randomly assigned a **subject_id** (variable name), and a **survey_code** (variable name). 
+
+The critical stimuli in the *indirect requests task* are coded according to their **stimulus type** as *belief* or *no_belief* (corresponding to Speaker Aware and Speaker Unaware from the paper, respectively).
+
+Answers to the **Short Story Task** are coded as *sst* (for the **stimType** variable**). 
+
+Answers to the preliminary SST questions are coded as *sst_general** (for the **stimType** variable).
+
+The number of a given item is coded as **stimNum**.
+
+Information about a participant's gender and whether they are a native English speaker is coded as *demographic1* in the **stimType** variable. 
+
+Finally, information about a participant's age and what they thought the experiment was about is coded as *demographic2* in the **stimType** variable.
