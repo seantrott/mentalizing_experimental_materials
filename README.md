@@ -28,7 +28,7 @@ There is also an .html page, *consent.html*, which embeds a consent form in the 
 
 ## Relevant variables
 
-Participants are randomly assigned to one of two lists (*group1* or *group2*), coded in the *condition* variable.
+Participants are randomly assigned to one of two lists (*group1* or *group2*), coded in the **condition** variable.
 
 Participants are also randomly assigned a **subject_id** (variable name), and a **survey_code** (variable name). 
 
