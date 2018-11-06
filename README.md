@@ -47,3 +47,7 @@ Finally, information about a participant's age and what they thought the experim
 ## Differences between experiments
 
 The only difference between Experiment 2 and Experiment 3, as described in Trott and Bergen (2018), is the target question: in Experiment 2, participants are asked to make a paragraph judgment, and in Experiment 3, they explicitly indicate whether they thought the speaker was making a request.
+
+## Contact
+
+For questions, please contact Sean Trott at sttrott at ucsd dot edu.
