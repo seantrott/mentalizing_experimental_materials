@@ -36,7 +36,7 @@ The critical stimuli in the indirect requests task are coded according to their 
 
 Answers to the Short Story Task are coded as *sst* (for the **stimType** variable**). 
 
-Answers to the preliminary SST questions are coded as *sst_general** (for the **stimType** variable).
+Answers to the preliminary SST questions are coded as *sst_general* (for the **stimType** variable).
 
 The number of a given item is coded as **stimNum**.
 
