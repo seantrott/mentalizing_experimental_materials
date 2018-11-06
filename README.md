@@ -50,4 +50,4 @@ The only difference between Experiment 2 and Experiment 3, as described in Trott
 
 ## Contact
 
-For questions, please contact Sean Trott at sttrott at ucsd dot edu.
+For questions, please contact Sean Trott at sttrott (at) ucsd dot edu.
