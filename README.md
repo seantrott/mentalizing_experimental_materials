@@ -8,7 +8,7 @@ Specifically, the code in `experiment2.html` corresponds to the protocol for Exp
 
 The code assumes that *JsPsych* (found [here](https://www.jspsych.org/)) has been downloaded and is located in the same directory as the experimental code.
 
-Additionally, this code was written with **version 5.0.03** of JsPsych in mind (there may be incompatibilities with the newest version).
+Additionally, this code was written with **version 5.0.3** of JsPsych in mind (there may be incompatibilities with the newest version).
 
 Finally, there are a couple of path/file-dependent functions:
 
