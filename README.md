@@ -2,6 +2,8 @@
 
 This repository contains the JsPsych code to run the online experiments described in Trott and Bergen (*Discourse Processes*, to appear). 
 
+Specifically, the code in `experiment2.html` corresponds to the protocol for Experiment 1 (minus the SST) and Experiment 2, and `experiment3.html` corresponds to the protocol for Experiment 3. 
+
 ## Dependencies
 
 The code assumes that *JsPsych* (found [here](https://www.jspsych.org/)) has been downloaded and is located in the same directory as the experimental code.
