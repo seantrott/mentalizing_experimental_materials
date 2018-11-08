@@ -2,7 +2,7 @@
 
 This repository contains the JsPsych code to run the online experiments described in Trott and Bergen (*Discourse Processes*, to appear). 
 
-Specifically, the code in `experiment2.html` corresponds to the protocol for Experiment 1 (minus the SST) and Experiment 2, and `experiment3.html` corresponds to the protocol for Experiment 3. 
+Specifically, the code in `experiment2.html` corresponds to the protocol for Experiment 1 (minus the SST) and Experiment 2, and `experiment3.html` corresponds to the protocol for Experiment 3. To run Experiment 1 without the SST, simply take out the code pushing those trial blocks onto the timeline.
 
 ## Dependencies
 
